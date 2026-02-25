@@ -51,13 +51,13 @@ jobs:
         with:
           node-version: '22'
           
-      - name: Authenticate to Azure Artifacts
+      - name: Configure Azure Artifacts auth
         run: |
-          echo "registry=https://pkgs.dev.azure.com/YashGohil/EmailToolkit/_packaging/email-toolkit-feed/npm/registry/" > ~/.npmrc
-          echo "always-auth=true" >> ~/.npmrc
-          echo "//pkgs.dev.azure.com/YashGohil/EmailToolkit/_packaging/email-toolkit-feed/npm/registry/:username=AzureDevOps" >> ~/.npmrc
-          echo "//pkgs.dev.azure.com/YashGohil/EmailToolkit/_packaging/email-toolkit-feed/npm/registry/:_password=$(echo -n ${{ secrets.AZURE_NPM_TOKEN }} | base64)" >> ~/.npmrc
-          echo "//pkgs.dev.azure.com/YashGohil/EmailToolkit/_packaging/email-toolkit-feed/npm/registry/:email=devops@local" >> ~/.npmrc
+            echo "@yash:registry=https://pkgs.dev.azure.com/YashGohil/EmailToolkit/_packaging/email-toolkit-feed/npm/registry/" > ~/.npmrc
+            echo "always-auth=true" >> ~/.npmrc
+            echo "//pkgs.dev.azure.com/YashGohil/EmailToolkit/_packaging/email-toolkit-feed/npm/registry/:username=AzureDevOps" >> ~/.npmrc
+            echo "//pkgs.dev.azure.com/YashGohil/EmailToolkit/_packaging/email-toolkit-feed/npm/registry/:_password=${{ secrets.AZURE_NPM_TOKEN }}" >> ~/.npmrc
+            echo "//pkgs.dev.azure.com/YashGohil/EmailToolkit/_packaging/email-toolkit-feed/npm/registry/:email=devops@local" >> ~/.npmrc
 
       - name: Install Dependencies
         run: npm install
