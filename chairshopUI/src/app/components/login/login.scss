@@ -1,0 +1,87 @@
+/* Full page background */
+.container {
+  height: 100vh;
+  background: linear-gradient(135deg, #4e73df, #1cc88a);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+}
+
+/* Page heading */
+.container h2 {
+  color: white;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+/* Login card */
+.login-container {
+  background: #ffffff;
+  padding: 35px 30px;
+  border-radius: 10px;
+  width: 350px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.login-container h3 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Form layout */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* Input groups */
+.username-container,
+.password-container {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #555;
+}
+
+input {
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: 0.2s ease;
+  outline: none;
+}
+
+input:focus {
+  border-color: #4e73df;
+  box-shadow: 0 0 4px rgba(78, 115, 223, 0.4);
+}
+
+/* Login button */
+button {
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  background: #4e73df;
+  color: white;
+  transition: 0.2s ease;
+}
+
+button:hover {
+  background: #2e59d9;
+  transform: translateY(-1px);
+}

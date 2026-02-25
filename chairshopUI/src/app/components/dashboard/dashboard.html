@@ -1,0 +1,38 @@
+<div class="container">
+    <div class="navbar">
+        <h2>Dashboard</h2>
+        <div class="toolbar">
+            <button (click)="logout()">Logout</button>
+            <button (click)="openEmail()">Email</button>
+        </div>
+    </div>
+    <div class="product-list">
+        <ul>
+            @for (product of products; track product) {
+                <li>
+                    <h3 appHighlight>{{ product }}</h3>
+                </li>
+            }
+        </ul>
+    </div>
+    <button (click)="openModal()">Open Modal</button>
+
+    <app-modal [isOpen]="isModalOpen" [data]="selectedChair" (closeModal)="close()">
+
+        <!-- BODY TEMPLATE -->
+        <ng-template #modalBody let-chair = "data" let-num = "num">
+            <h2>{{ chair.name }}</h2>
+            <p>Price: ₹{{ chair.price }}</p>
+            <p>Num: {{ num.value }}</p>
+        </ng-template>
+
+        <!-- FOOTER TEMPLATE -->
+        <ng-template #modalFooter let-chair = "data">
+            <button>Add to Cart</button>
+            <button>Buy Now</button>
+            <button (click)="close()">Close</button>
+        </ng-template>
+
+    </app-modal>
+
+</div>

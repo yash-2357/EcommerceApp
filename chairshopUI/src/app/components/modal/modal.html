@@ -1,0 +1,24 @@
+<div class="overlay">
+    @if (isOpen) {
+        <div class="modal">
+        <!-- Body -->
+         <div class="modalBody">
+            <ng-container 
+                *ngTemplateOutlet="bodyTemplate; context: { data: data, num: num }">
+            </ng-container>
+         </div>
+        <!-- Footer -->
+         <div class="modalFooter">
+            <ng-container 
+                *ngTemplateOutlet="footerTemplate ? footerTemplate : defaultFooter; context: { data: data }">
+            </ng-container> 
+        </div>
+    </div>
+    }
+    
+</div>
+
+<!-- Default Footer Template -->
+<ng-template #defaultFooter>
+  <button (click)="close()">Close</button>
+</ng-template>

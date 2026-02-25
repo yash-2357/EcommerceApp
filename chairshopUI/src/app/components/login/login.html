@@ -1,0 +1,17 @@
+<div class="container">
+    <h2>Welcome to Chair shop</h2>
+    <div class="login-container">
+        <h3>Login</h3>
+        <div class="login-form">
+            <div class="username-container">
+                <label for="username">Username : </label>
+                <input id="username" type="text" placeholder="Username" [(ngModel)]="username">
+            </div>
+            <div class="password-container">
+                <label for="password">Password : </label>
+                <input id="password" type="password" placeholder="Password" [(ngModel)]="password"> 
+            </div>
+            <button (click)="login()">Login</button>
+        </div>
+    </div>
+</div>

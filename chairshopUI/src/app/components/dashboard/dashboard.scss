@@ -1,0 +1,96 @@
+/* Container */
+.container {
+  min-height: 100vh;
+  background: #f5f7fa;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffff;
+  padding: 15px 25px;
+  border-radius: 8px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+  margin-bottom: 25px;
+}
+
+.navbar h2 {
+  margin: 0;
+  font-weight: 600;
+}
+
+/* Toolbar */
+.toolbar {
+  display: flex;
+  gap: 12px;
+}
+
+/* Buttons */
+button {
+  padding: 8px 16px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.2s ease;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+.toolbar button:first-child {
+  background: #e53935;
+  color: white;
+}
+
+.toolbar button:last-child {
+  background: #1976d2;
+  color: white;
+}
+
+/* Product List */
+.product-list {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.06);
+}
+
+.product-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.product-list li {
+  padding: 12px 15px;
+  border-bottom: 1px solid #eee;
+  transition: 0.2s ease;
+}
+
+.product-list li:last-child {
+  border-bottom: none;
+}
+
+.product-list li:hover {
+  background: #f0f4ff;
+  border-radius: 6px;
+}
+
+.product-list h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* Modal Button */
+.container > button {
+  margin-top: 20px;
+  background: #4caf50;
+  color: white;
+}

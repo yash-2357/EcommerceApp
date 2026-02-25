@@ -1,0 +1,6 @@
+@ChairShop_HostAddress = http://localhost:5121
+
+GET {{ChairShop_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
